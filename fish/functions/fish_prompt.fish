@@ -15,12 +15,15 @@ set __fish_git_prompt_color_dirtystate white
 set __fish_git_prompt_color_invalidstate red
 set __fish_git_prompt_color_merging yellow
 set __fish_git_prompt_color_stagedstate yellow
+set __fish_git_prompt_color_cleanstate blue --bold
+set __fish_git_prompt_color_dirtystate red
+set __fish_git_prompt_color_upstream_equal red
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
 
 # Icons
-set __fish_git_prompt_char_cleanstate '👍 '
+set __fish_git_prompt_char_cleanstate '👍'
 set __fish_git_prompt_char_conflictedstate ' ⚠️  '
 set __fish_git_prompt_char_dirtystate '💩 '
 set __fish_git_prompt_char_invalidstate '🤮 '
@@ -46,6 +49,7 @@ function fish_prompt
   set_color normal
 
   printf '%s ' (__fish_git_prompt)
+  set_color green
+  printf '\\n💲 '
   set_color normal
-  printf '\\n💲 ' 
 end
