@@ -1,3 +1,3 @@
 function docker
-	podman $argv
+podman $argv
 end

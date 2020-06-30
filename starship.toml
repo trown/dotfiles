@@ -1,0 +1,48 @@
+prompt_order=["hostname", "kubernetes", "time", "line_break", "directory", "git_branch", "git_status", "git_commit", "git_state", "rust","cmd_duration","line_break","env_var","character"]
+
+[character]      # The name of the module we are configuring is "character"
+symbol = "💲"
+
+[hostname]
+ssh_only = false
+style = "bold blue"
+
+[kubernetes]
+disabled = false
+style = "underline yellow"
+
+[git_branch]
+symbol = " "
+style = "underline bold purple"
+
+[git_commit]
+style = "dimmed green"
+only_detached = false
+
+[rust]
+style = "dimmed cyan"
+
+[env_var]
+variable = "SHELL"
+
+[git_status]
+conflicted = "🏳"
+ahead = " "
+behind = " "
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
+show_sync_count = true
+
+[time]
+disabled = false
+style = "dimmed yellow"
+utc_time_offset = "-5"
+format = "%r"
