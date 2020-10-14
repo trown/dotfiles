@@ -34,35 +34,35 @@ output DP-1 {
     position 1920 0
 }
 
-output DP-3 {
-    position 1920 0
-    resolution 1920x1080
-#    background /home/trown/Pictures/MettaJoveShavedIce.jpg fill
-}
-
 output DP-4 {
-    position 3840 0
-    resolution 1920x1080
-#    background /usr/share/backgrounds/fedora-workstation/aurora-over-iceland.png fit
-}
-output DP-5 {
     position 1920 0
     resolution 1920x1080
 #    background /home/trown/Pictures/MettaJoveShavedIce.jpg fill
 }
 
+output DP-3 {
+    position 3840 0
+    resolution 1920x1080
+#    background /usr/share/backgrounds/fedora-workstation/aurora-over-iceland.png fit
+}
 output DP-6 {
-    position 3840 0
-    resolution 1920x1080
-#    background /usr/share/backgrounds/fedora-workstation/aurora-over-iceland.png fit
-}
-output DP-7 {
     position 1920 0
     resolution 1920x1080
 #    background /home/trown/Pictures/MettaJoveShavedIce.jpg fill
 }
 
+output DP-5 {
+    position 3840 0
+    resolution 1920x1080
+#    background /usr/share/backgrounds/fedora-workstation/aurora-over-iceland.png fit
+}
 output DP-8 {
+    position 1920 0
+    resolution 1920x1080
+#    background /home/trown/Pictures/MettaJoveShavedIce.jpg fill
+}
+
+output DP-7 {
     position 3840 0
     resolution 1920x1080
 #    background /usr/share/backgrounds/fedora-workstation/aurora-over-iceland.png fit
