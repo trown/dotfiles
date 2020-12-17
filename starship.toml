@@ -57,5 +57,5 @@ disabled = false
 style = "dimmed yellow"
 utc_time_offset = "-5"
 time_format = "%r"
-format = "at 🕙[$time]($style) "
+format = "at [$time]($style) "
 
