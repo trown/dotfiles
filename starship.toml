@@ -1,7 +1,23 @@
-prompt_order=["hostname", "kubernetes", "time", "line_break", "directory", "git_branch", "git_status", "git_commit", "git_state", "rust","cmd_duration","line_break","env_var","character"]
+format = """\
+  $hostname\
+  $kubernetes\
+  $time\
+  $line_break\
+  $directory\
+  $git_branch\
+  $git_commit\
+  $git_state\
+  $git_status\
+  $rust\
+  $cmd_duration\
+  $line_break\
+  $env_var\
+  $character\
+  """
 
 [character]      # The name of the module we are configuring is "character"
-symbol = "💲"
+success_symbol = "[💲](bold green)"
+error_symbol = "[✖](bold red)"
 
 [hostname]
 ssh_only = false
@@ -26,23 +42,20 @@ style = "dimmed cyan"
 variable = "SHELL"
 
 [git_status]
-conflicted = "🏳"
-ahead = " "
-behind = " "
-diverged = "😵"
-untracked = "🤷‍"
-stashed = "📦"
-modified = "📝"
-staged.value = "++"
-staged.style = "green"
-staged_count.enabled = true
-staged_count.style = "green"
-renamed = "👅"
-deleted = "🗑"
-show_sync_count = true
+format = '([\[ ($ahead_behind )($staged )($conflicted$deleted$renamed )([\[](bold red)$modified$untracked[\]](bold red) )\]( $stashed)](bold purple) )'
+ahead = '[⇡${count}](bold red)'
+diverged = '[⇕⇡${ahead_count}⇣${behind_count}](bold red)'
+behind = '[⇣${count}](bold red)'
+untracked = '[?](yellow)'
+stashed = '[\(*\)](red)'
+modified = '[!](yellow)'
+staged = '[++\($count\)](green)'
+
 
 [time]
 disabled = false
 style = "dimmed yellow"
 utc_time_offset = "-5"
-format = "%r"
+time_format = "%r"
+format = "at 🕙[$time]($style) "
+
