@@ -23,7 +23,6 @@ set $lock ~/.local/bin/lock
 #
 output eDP-1 {
 #    disable
-    scale 2
     position 0 0
 }
 bindswitch lid:on output eDP-1 disable
