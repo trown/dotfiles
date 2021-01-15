@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "battery"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
@@ -71,6 +71,13 @@
         },
         "on-click": "pamixer -i 5",
         "on-click-right": "pamixer -d 5"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     }
 }
 

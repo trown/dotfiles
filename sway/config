@@ -21,11 +21,12 @@ set $lock swaylock -f -c000000
 
 ### Output configuration
 output eDP-1 {
+    scale 2
     position 0 0
 }
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
-exec_always ~/.config/sway/scripts/clamshell.sh
+#exec_always ~/.config/sway/scripts/clamshell.sh
 
 output DP-3 {
     position 3840 0
@@ -205,7 +206,7 @@ bindsym $mod+r mode "resize"
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
-bindsym XF86AudioMicMute exec ~/.config/sway/scripts/micmute.sh
+#bindsym XF86AudioMicMute exec ~/.config/sway/scripts/micmute.sh
 bindsym XF86MonBrightnessDown exec sudo light -U 5
 bindsym XF86MonBrightnessUp exec sudo light -A 5
 bindsym XF86Display exec $lock
